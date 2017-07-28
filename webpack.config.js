@@ -12,7 +12,8 @@ module.exports = {
     output   : {
         path    : './dist/',
         filename: '[name].js',
-        libraryTarget : "umd"
+				library: 'EmojiPicker',
+        libraryTarget: 'var'
     },
     //uncomment the devtool key for development so that webpack will provide a map to your source
     // devtool  : '#inline-source-map',
@@ -30,7 +31,7 @@ module.exports = {
     },
     //Since jQuery is a peer-dependency, we leave it here as an external
     externals: {
-        "jquery" : "jquery"
+        "jquery" : "jQuery"
     },
     plugins  : [
         //The uglify plugin is used to minify and obfuscate the source code
